@@ -30,7 +30,7 @@ public class ItemController {
 	@GetMapping("/{orderId}")  //Mapper + method =get
 	public  JsonResult<List<Item>>  findItems(@PathVariable String orderId) throws InterruptedException{
 		log.info("server.port="+port+", orderId="+orderId);
-		if(Math.random()<0.5) {
+		if(Math.random()<0.3) {
 			System.out.println("随机数为："+Math.random()+"开始延迟");
 			try {
 				System.out.println("暂停3秒");
